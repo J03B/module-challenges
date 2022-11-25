@@ -17,30 +17,23 @@ header {
     color: #ffffff;
 }
 
-header h1 {
+header li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+h1 {
     display: inline-block;
     font-size: 48px;
 }
 
-header h1 .seo {
-    color: #d9dcd6;
-}
-
-header nav {
+nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-}
-
-header nav ul {
-    list-style-type: none;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
 }
 
 a {
@@ -60,6 +53,10 @@ footer {
 }
 
 /* Class style settings */
+.seo {
+    color: #d9dcd6;
+}
+
 .hero {
     height: 800px;
     width: 100%;
@@ -79,13 +76,13 @@ footer {
     margin-left: 25px;
 }
 
+/* Content class consolidated to remove clutter */
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-/* Moved content children here and consolidated styles to remove clutter */
 .content section {
     margin-bottom: 20px;
     padding: 50px;
@@ -104,6 +101,7 @@ footer {
     font-size: 36px;
 }
 
+/* Consolidated the benefits elements to remove clutter */
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -115,7 +113,6 @@ footer {
     background-color: #2589bd;
 }
 
-/* Consolidated the benefits elements to remove clutter */
 .benefits section {
     margin-bottom: 32px;
     color: #ffffff;
