@@ -1,6 +1,7 @@
 :root {
     --white: #fff;
     --light: #92CCCD;
+    --lightShadow: #29627e;
     --medium: #445876;
     --dark: #31343D;
 }
@@ -44,6 +45,20 @@ sub {
     background-image: url("../images/binary-code.jpg");
     color: var(--white);
     font-size: large;
+}
+
+div {
+    display: flex;
+    margin: 4% 0 4% 0;
+}
+
+aside {
+    width: 10%;
+    padding-right: 2%;
+    margin: 0 2% 0 2%;
+    float: left;
+    border-right: 4px solid var(--lightShadow);
+    color: var(--medium);
 }
 
 /* class styles */
