@@ -4,9 +4,13 @@
     --lightShadow: #29627e;
     --medium: #445876;
     --dark: #31343D;
+    --workWidth: 40%;
+    --workWidthHead: 20%;
 }
+
 /* element styles */
 
+/* Heading and navigation bar */
 header {
     display: flex;
     flex-direction: row;
@@ -17,7 +21,7 @@ header {
 
 h1 {
     padding: 1% 1% 1% 8%;
-    font-size: 400%;
+    font-size: 500%;
     background-color: var(--light);
     color: var(--dark);
     margin: 2% 2% 2% 0;
@@ -25,7 +29,7 @@ h1 {
 }
 
 nav {
-    width: 30%;
+    width: 40%;
     justify-content: space-evenly;
     display: flex;
 }
@@ -47,22 +51,99 @@ sub {
     font-size: large;
 }
 
+/* Main content of site, including the asides */
 div {
     display: flex;
     margin: 4% 0 4% 0;
 }
 
 aside {
-    width: 10%;
+    width: 25%;
     padding-right: 2%;
     margin: 0 2% 0 2%;
     float: left;
     border-right: 4px solid var(--lightShadow);
     color: var(--medium);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
+aside h2 {
+    font-size: 400%;
+    text-align: right;
+}
+
+section {
+    width: 75%;
+}
+
+section p {
+    margin: 0 10% 1em 0;
+    line-height: 1.5em;
+}
+
+/* Buttons for the Work secion */
+img {
+    width: var(--workWidth);
+    border: 2px solid var(--light);
+}
+
+/* Links for the Contact Me section */
+li {
+    display: flex;
+}
+
+/* */
 /* class styles */
+/* */
+
+/* Word cards stylization */
+.card {
+    display: flex;
+}
+
+.card-header {
+    border: 2px solid var(--light);
+    margin: 10% -4px 10% 0;
+    flex-direction: column;
+    width: var(--workWidthHead);
+    position: relative;
+    right: var(--workWidth);
+    color: var(--white);
+    background-image: linear-gradient(
+          var(--medium) 0%,
+          var(--lightShadow) 100%
+        );
+    border-radius: 0 6px 6px 0;
+}
+
+.card-header h3 {
+    font-size: 150%;
+    margin: 1%;
+}
+
+.card-header p {
+    line-height: 1em;
+    margin: 0 1% 1% 1%;
+}
 
 .J03B {
     
+}
+
+/* id styles */
+#Contact-Me, #Resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#Work {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
 }
