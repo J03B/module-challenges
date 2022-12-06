@@ -151,19 +151,34 @@ footer h3 {
 }
 
 /* id styles */
-#Contact-Me, #Resume {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: center;
+#About-Me img {
+    float: left;
+    margin: 1% 2% 0 0;
+    width: 25%;
 }
+
+#About-Me p {
+    text-align: justify;
+}
+
 
 #Work {
     display: flex;
     justify-content: space-around;
     align-content: space-around;
     flex-wrap: wrap;
+}
+
+#first-tile {
+    max-width: 95%;
+}
+
+#Contact-Me, #Resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 /* Interactive styles */
@@ -199,7 +214,7 @@ footer h3 {
     section {
         width: 100%;
     }
-    .card {
+    .card, #first-tile {
         max-width: 95%;
         margin: 2%;
     }
@@ -209,9 +224,14 @@ footer h3 {
     aside h2 {
         font-size: 300%;
     }
-    .card {
+    
+    .card, #first-tile {
         max-width: 90%;
         margin: 2%;
+    }
+    
+    #About-Me img {
+        width: 50%;
     }
 }
 
