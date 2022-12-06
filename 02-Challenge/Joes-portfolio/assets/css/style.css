@@ -4,8 +4,7 @@
     --lightShadow: #29627e;
     --medium: #445876;
     --dark: #31343D;
-    --workWidth: 40%;
-    --workWidthHead: 20%;
+    --workWidth: 45%;
 }
 
 /* element styles */
@@ -49,6 +48,7 @@ sub {
     background-image: url("../images/binary-code.jpg");
     color: var(--white);
     font-size: large;
+    font-weight: bolder;
 }
 
 /* Main content of site, including the asides */
@@ -85,13 +85,29 @@ section p {
 
 /* Buttons for the Work secion */
 img {
-    width: var(--workWidth);
+    max-width: 100%;
     border: 2px solid var(--light);
 }
 
 /* Links for the Contact Me section */
 li {
     display: flex;
+}
+
+footer {
+    position: block;
+    width: 100%;
+    color: var(--light);
+    text-align: center;
+    background-color: var(--dark);
+    padding: 1.5em;
+    background-image: linear-gradient(
+        var(--dark) 0%,
+        var(--medium) 100% );
+}
+
+footer h3 {
+    font-size: 200%;
 }
 
 /* */
@@ -101,15 +117,21 @@ li {
 /* Word cards stylization */
 .card {
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    max-width: var(--workWidth);
+    margin: 2%;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 .card-header {
     border: 2px solid var(--light);
-    margin: 10% -4px 10% 0;
+    margin: 10% -100% 10% 0;
     flex-direction: column;
-    width: var(--workWidthHead);
+    width: var(--workWidth);
     position: relative;
-    right: var(--workWidth);
+    right: 100%;
     color: var(--white);
     background-image: linear-gradient(
           var(--medium) 0%,
@@ -128,10 +150,6 @@ li {
     margin: 0 1% 1% 1%;
 }
 
-.J03B {
-    
-}
-
 /* id styles */
 #Contact-Me, #Resume {
     display: flex;
@@ -147,3 +165,53 @@ li {
     align-content: space-around;
     flex-wrap: wrap;
 }
+
+/* Interactive styles */
+
+  .card:hover, .card:hover img {
+    box-shadow: inset 0px 0px 8px var(--lightShadow), 0 0 15px var(--lightShadow);
+    opacity: .85;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        width: 30%;
+        margin: 2%;
+    }
+
+    div {
+        display: block;
+        margin: 2%;
+    }
+    aside {
+        width: 100%;
+        padding-right: 0%;
+        margin: 0 0 2% 0;
+        float: none;
+        border-right: none;
+        border-bottom: 4px solid var(--lightShadow);
+        justify-content: center;
+    }
+    aside h2 {
+        text-align: center;
+    }
+    section {
+        width: 100%;
+    }
+    .card {
+        max-width: 95%;
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    aside h2 {
+        font-size: 300%;
+    }
+    .card {
+        max-width: 90%;
+        margin: 2%;
+    }
+}
+
