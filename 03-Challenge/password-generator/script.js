@@ -1,6 +1,3 @@
-// Assignment code here
-
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -49,6 +46,8 @@ function generatePassword() {
     for (let i = 0; i < validCharType.length; i++) {
       while (!validCharType[i]) {
         pwCharType[i] = ValidateYesOrNo(window.prompt("Include " + charTypeCriteria[i] + " characters in the password? (Y/N or Yes/No)"));
+        
+        // Make sure the user entered something valid to break the loop
         if (pwCharType[i] >= 0) {
           validCharType[i] = true;
         } 
@@ -80,10 +79,10 @@ function generatePassword() {
 function ValidateYesOrNo(yon) {
   let result;
   yon = yon.toUpperCase();
-  if (yon == "Y" || yon == "YE" == "YES") {
+  if ((yon == "Y") || (yon == "YE") || (yon == "YES")) {
     result = 1;
   }
-  else if (yon == "N" || yon == "NO") {
+  else if ((yon == "N") || (yon == "NO")) {
     result = 0;
   }
   else {
